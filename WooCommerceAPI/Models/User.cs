@@ -32,20 +32,20 @@ namespace WooCommerceAPI.Models
         public string country { get; set; }
     }
 
-    public class Self
+    public class UserSelf
     {
         public string href { get; set; }
     }
 
-    public class Collection
+    public class UserCollection
     {
         public string href { get; set; }
     }
 
-    public class Links
+    public class UserLinks
     {
-        public IList<Self> self { get; set; }
-        public IList<Collection> collection { get; set; }
+        public IList<UserSelf> self { get; set; }
+        public IList<UserCollection> collection { get; set; }
     }
 
     public class User
@@ -65,6 +65,6 @@ namespace WooCommerceAPI.Models
         public bool is_paying_customer { get; set; }
         public string avatar_url { get; set; }
         public IList<object> meta_data { get; set; }
-        public Links _links { get; set; }
+        public UserLinks _links { get; set; }
     }
 }
